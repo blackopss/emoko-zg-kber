@@ -28,31 +28,7 @@ client.user.setGame(`I just want to feel alive till i die`,"http://twitch.tv/S-F
   console.log('')
 });
 
-const devs = ['244423000802328576' , '301394147988733952' , '' , ''];
-const adminprefix = "#";
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  }
 
-  
-  });
 
 
 
